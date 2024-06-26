@@ -24,6 +24,9 @@ const config: Config = {
           grey: "#9CA2A5",
         },
       },
+      fontFamily: {
+        sans: ["var(--font-futura)"],
+      },
     },
   },
   plugins: [],
