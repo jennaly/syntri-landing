@@ -30,15 +30,12 @@ const Value = ({
   );
 };
 
-const HeroValues = () => {
+const Values = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold py-[44px]">Our Values</h2>
-      <div className="grid grid-cols-2 gap-x-8 gap-y-14 px-4">
-        {values.map((value, index) => (
-          <Value {...value} key={index} />
-        ))}
-      </div>
+    <div className="grid grid-cols-2 gap-x-8 gap-y-14 px-4">
+      {values.map((value, index) => (
+        <Value {...value} key={index} />
+      ))}
     </div>
   );
 };
@@ -74,4 +71,4 @@ const values = [
   },
 ];
 
-export default HeroValues;
+export default Values;
