@@ -17,6 +17,7 @@ const config: Config = {
         primary: {
           blue: "#103853",
           white: "#FFFFFF",
+          grey: "#E2DEDC",
           black: "#100F1B",
         },
         secondary: {
