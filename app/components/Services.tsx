@@ -27,15 +27,19 @@ const Service = ({
         alt={imageAltText}
         className="w-1/3"
       />
-      <h3 className="text-lg text-[24px] font-bold">{serviceTitle}</h3>
-      <p className="text-lg">{description}</p>
+      <h3 className="text-lg text-[24px] lg:text-[26px] font-bold">
+        {serviceTitle}
+      </h3>
+      <p className="text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
+        {description}
+      </p>
     </div>
   );
 };
 
 const Services = () => {
   return (
-    <div className="grid gap-[32px]">
+    <div className="grid gap-[32px] md:grid-cols-2 xl:grid-cols-3 xl:gap-x-24 xl:gap-y-20">
       {services.map((service, index) => (
         <Service {...service} key={index} />
       ))}

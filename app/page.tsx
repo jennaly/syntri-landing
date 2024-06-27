@@ -87,20 +87,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="services"
-        className="flex flex-col gap-[32px] max-w-xl text-center text-primary-black py-[48px] px-[24px]"
-      >
-        <div className="flex flex-col gap-[24px]">
-          <h2 className="text-[28px] font-bold tracking-wide">
-            What We Deliver
-          </h2>
-          <p className="text-lg leading-[26px] tracking-wide">
-            Enhance your business efficiency with our comprehensive suite of
-            solutions, designed to streamline processes and drive productivity.
-          </p>
+      <section id="services" className="relative overflow-clip">
+        <div className="flex absolute top-2 -right-32 md:-right-20 lg:-right-12 xl:-right-20 md:top-4">
+          <Image
+            src="/assets/Services-Vector-Dots.png"
+            width={722}
+            height={168}
+            alt="Illustration of dots"
+            className="w-[200px] object-contain"
+          />
+          <Image
+            src="/assets/Services-Vector-Dots.png"
+            width={722}
+            height={168}
+            alt="Illustration of dots"
+            className="ml-[10px] w-[200px] object-contain hidden xl:inline"
+          />
         </div>
-        <Services />
+
+        <div className="flex flex-col gap-[32px] lg:gap-[44px] max-w-[1440px] mx-auto text-center text-primary-black py-[48px] px-[24px]">
+          <div className="flex flex-col gap-[24px]">
+            <h2 className="text-[28px] font-bold tracking-wide">
+              What We Deliver
+            </h2>
+            <p className="md:w-[550px] lg:w-[700px] md:mx-auto text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
+              Enhance your business efficiency with our comprehensive suite of
+              solutions, designed to streamline processes and drive
+              productivity.
+            </p>
+          </div>
+          <Services />
+        </div>
       </section>
     </main>
   );

@@ -25,14 +25,16 @@ const Value = ({
         alt={imageAltText}
         className="w-full"
       />
-      <span className="text-lg">{description}</span>
+      <span className="text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
+        {description}
+      </span>
     </div>
   );
 };
 
 const Values = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-20 gap-y-14 md:px-0 px-4 md:grid-cols-4  xl:w-[70%] xl:pr-20">
+    <div className="grid grid-cols-2 gap-x-32 gap-y-20 md:px-0 px-4 md:grid-cols-4 xl:w-[70%] xl:pr-20">
       {values.map((value, index) => (
         <Value {...value} key={index} />
       ))}
