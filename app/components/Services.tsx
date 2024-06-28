@@ -25,14 +25,10 @@ const Service = ({
         height={imageHeight}
         width={imageWidth}
         alt={imageAltText}
-        className="w-1/3"
+        className="w-1/4"
       />
-      <h3 className="text-lg text-[24px] lg:text-[26px] font-bold">
-        {serviceTitle}
-      </h3>
-      <p className="text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
-        {description}
-      </p>
+      <h3 className="text-lg xl:text-xl font-bold">{serviceTitle}</h3>
+      <p className="text-lg xl:text-xl">{description}</p>
     </div>
   );
 };
