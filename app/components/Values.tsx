@@ -34,7 +34,7 @@ const Value = ({
 
 const Values = () => {
   return (
-    <div className="grid grid-cols-2 gap-x-32 gap-y-20 md:px-0 px-4 md:grid-cols-4 xl:w-[70%] xl:pr-20">
+    <div className="grid grid-cols-2 gap-x-20 gap-y-20 md:px-0 px-4 md:grid-cols-4 xl:w-[64%] xl:pr-20">
       {values.map((value, index) => (
         <Value {...value} key={index} />
       ))}
