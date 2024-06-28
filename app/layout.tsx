@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "./components/Footer";
 
-const futura = localFont({
+export const futura = localFont({
   src: [
     {
       path: "../public/fonts/Futura-Regular.ttf",
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${futura.variable} font-sans`}>{children}</body>
+      <Footer />
     </html>
   );
 }
