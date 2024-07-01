@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Values from "./components/Values";
 import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -94,14 +95,14 @@ export default function Home() {
             width={722}
             height={168}
             alt="Illustration of dots"
-            className="w-[200px] xl:w-[230px] object-contain"
+            className="w-[180px] xl:w-[230px] object-contain"
           />
           <Image
             src="/assets/Services-Vector-Dots.png"
             width={722}
             height={168}
             alt="Illustration of dots"
-            className="ml-[10px] w-[200px] xl:w-[230px] object-contain hidden xl:inline"
+            className="ml-[10px] xl:w-[230px] object-contain hidden xl:inline"
           />
         </div>
 
@@ -122,15 +123,15 @@ export default function Home() {
 
       <section id="our-story" className="bg-primary-blue w-full">
         <div className="max-w-[1440px] mx-auto flex flex-col py-[48px] xl:pt-[100px] xl:pb-[136px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] text-primary-white">
-          <div className="flex flex-col md:flex-row md:gap-[32px] lg:gap-[44px] xl:justify-between">
-            <div className="md:hidden mx-auto my-[24px]">
-              <div className="relative">
+          <div className="flex flex-col md:flex-row-reverse md:gap-[32px] lg:gap-[44px] xl:justify-between">
+            <div className="md:w-[52%] xl:w-[46%] my-auto">
+              <div className="px-8 md:pr-8 md:pl-0 relative w-full h-full">
                 <Image
                   src="/assets/Our-Story.png"
                   width={300}
                   height={293}
                   alt="Illustration of an IT employee working"
-                  className="rounded-b-[18px]"
+                  className="w-full"
                 />
 
                 <Image
@@ -138,14 +139,23 @@ export default function Home() {
                   width={140}
                   height={92}
                   alt="Dots vector"
-                  className="absolute -top-6 -left-7"
+                  className="absolute -top-6 left-2 w-[135px] md:-top-10 md:-left-8 md:w-[140px] lg:hidden "
                 />
+
+                <Image
+                  src="/assets/Our-Story-Vector-Dots.png"
+                  width={140}
+                  height={92}
+                  alt="Dots vector"
+                  className="absolute -left-7 top-10 xl:-left-10 xl:top-10 lg:w-[10%] hidden lg:inline-block"
+                />
+
                 <Image
                   src="/assets/Hero-Vector-Rectangle.png"
-                  width={356}
-                  height={354}
+                  width={300}
+                  height={293}
                   alt="Rectangle vector"
-                  className="absolute top-7 left-6 w-full h-full"
+                  className="absolute w-full h-full top-7 left-8 px-8 md:pr-8 md:pl-0"
                 />
 
                 <Image
@@ -153,13 +163,12 @@ export default function Home() {
                   width={280}
                   height={58}
                   alt="Rectangle vector"
-                  className="absolute -right-5 bottom-0 z-10 w-[30px]"
+                  className="absolute right-2 bottom-0 z-10 w-[32px] md:right-3"
                 />
               </div>
             </div>
-
-            <div className="flex flex-col gap-[32px] pt-[44px] pb-[12px] lg:py-[50px] text-center md:w-[48%] md:text-left xl:justify-end xl:py-0 max-h-[550px]">
-              <h2 className="mx-auto lg:mx-0 text-3xl xl:text-4xl font-bold tracking-wide max-w-[500px]">
+            <div className="flex flex-col gap-[32px] pb-[12px] mt-[10px] py-[50px] md:mt-[0] md:py-[0] text-center md:w-[48%] md:text-left xl:justify-end max-h-[550px]">
+              <h2 className="mx-auto md:mx-0 text-3xl xl:text-4xl font-bold tracking-wide max-w-[500px]">
                 Know Our Story
               </h2>
               <p className="text-md lg:text-lg tracking-wide text-primary-grey">
@@ -179,44 +188,38 @@ export default function Home() {
                 businesses in today's dynamic digital era.
               </p>
             </div>
-
-            <div className="hidden md:inline md:w-[52%] xl:w-[46%]">
-              <div className="pr-6 xl:pr-8 relative w-full h-full">
-                <Image
-                  src="/assets/Our-Story.png"
-                  width={300}
-                  height={293}
-                  alt="Illustration of an IT employee working"
-                  className="w-full h-full object-cover object-center rounded-b-[18px]"
-                />
-
-                <Image
-                  src="/assets/Our-Story-Vector-Dots.png"
-                  width={140}
-                  height={92}
-                  alt="Dots vector"
-                  className="absolute top-10 -left-7 xl:-left-10 xl:top-10 xl:w-[10%]"
-                />
-
-                <Image
-                  src="/assets/Hero-Vector-Rectangle.png"
-                  width={356}
-                  height={354}
-                  alt="Rectangle vector"
-                  className="pr-6 xl:pr-8 absolute top-7 left-6 xl:left-10 xl:top-9 w-full h-full"
-                />
-
-                <Image
-                  src="/assets/Our-Story-Vector-Stripes.png"
-                  width={280}
-                  height={58}
-                  alt="Rectangle vector"
-                  className="absolute -right-0 bottom-0 z-10 w-[60px]"
-                />
-              </div>
-            </div>
           </div>
         </div>
+      </section>
+
+      <section id="testimonials" className="relative">
+        <div className="max-w-[1440px] mx-auto px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] pt-[48px] xl:pt-[100px]">
+          <div className="max-w-[570px]  text-center md:text-left flex flex-col gap-[24px]">
+            <h2 className="text-3xl xl:text-4xl font-bold tracking-wide">
+              See What Clients Are Saying
+            </h2>
+            <p className="text-md lg:text-lg tracking-wide">
+              Explore the sentiments and experiences of our clients as they
+              share their thoughts and satisfaction.
+            </p>
+          </div>
+        </div>
+        <Testimonials />
+        <Image
+          src="/assets/Services-Vector-Dots.png"
+          width={722}
+          height={168}
+          alt="Illustration of dots"
+          className="absolute bottom-2 -left-4 w-[180px] md:w-[200px] xl:w-[230px] object-contain"
+        />
+
+        <Image
+          src="/assets/Testimonials-Vector-Rectangle.png"
+          width={856}
+          height={232}
+          alt="Illustration of stripes"
+          className="absolute top-0 md:top-0 lg:top-10 xl:top-20 right-0 w-[150px] xl:w-[200px] object-contain"
+        />
       </section>
     </main>
   );
