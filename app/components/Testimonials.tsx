@@ -54,7 +54,11 @@ const Testimonials = () => {
       className="px-[24px] md:pl-[40px] md:pr-[0px] lg:pl-[80px] xl:pl-[100px] 2xl:pl-[0px]"
       ref={ref}
     >
-      <div className="relative overflow-hidden 2xl:w-full 2xl:justify-center 2xl:flex">
+      <div
+        className={`relative overflow-hidden 2xl:w-[full] 2xl:${
+          testimonials.length > 3 ? "justify-start" : "justify-center"
+        } 2xl:flex`}
+      >
         <div className="max-w-6xl pt-[40px] 2xl:max-w-fit">
           <motion.div
             animate={{
@@ -63,7 +67,9 @@ const Testimonials = () => {
             transition={{
               ease: "easeInOut",
             }}
-            className="flex items-stretch"
+            className={`flex items-stretch ${
+              testimonials.length > 3 ? `pl-[30px]` : ""
+            }`}
           >
             {testimonials.map((testimonial, index) => {
               return <Testimonial key={index} {...testimonial} />;
@@ -75,8 +81,8 @@ const Testimonials = () => {
         <div className="flex items-center gap-4 text-secondary-blue mb-8">
           <button
             className={`rounded-lg  border border-secondary-blue bg-white p-[14px] text-2xl transition-opacity ${
-              CAN_SHIFT_LEFT ? "" : "opacity-30"
-            }`}
+              !CAN_SHIFT_LEFT && !CAN_SHIFT_RIGHT ? "hidden" : ""
+            } ${CAN_SHIFT_LEFT ? "" : "opacity-30"}`}
             disabled={!CAN_SHIFT_LEFT}
             onClick={shiftLeft}
           >
@@ -84,8 +90,8 @@ const Testimonials = () => {
           </button>
           <button
             className={`rounded-lg border border-secondary-blue bg-white p-[14px] text-2xl transition-opacity ${
-              CAN_SHIFT_RIGHT ? "" : "opacity-30"
-            }`}
+              !CAN_SHIFT_LEFT && !CAN_SHIFT_RIGHT ? "hidden" : ""
+            } ${CAN_SHIFT_RIGHT ? "" : "opacity-30"}`}
             disabled={!CAN_SHIFT_RIGHT}
             onClick={shiftRight}
           >
