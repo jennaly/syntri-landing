@@ -31,8 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${futura.variable} font-sans`}>{children}</body>
-      <Footer />
+      <body className={`${futura.variable} font-sans`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
