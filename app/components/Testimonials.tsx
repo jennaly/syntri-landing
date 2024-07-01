@@ -106,7 +106,7 @@ const Testimonial = ({
     <div
       className={`relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 border border-secondary-blue flex flex-col justify-between rounded-3xl w-full mr-[20px] md:w-[528px] md:mr-[30px]`}
     >
-      <p className="text-md lg:text-lg tracking-wide p-[40px] text-center">
+      <p className="text-md lg:text-lg p-[40px] text-center font-medium italic">
         {sentiment}
       </p>
       <div className="flex items-center gap-[20px] bg-secondary-blue p-[40px] rounded-b-3xl">
