@@ -14,12 +14,15 @@ const BREAKPOINTS = {
   xl: 1440,
 };
 
+let CARD_WIDTH: number;
+let MARGIN: number;
+
 const Testimonials = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  const CARD_WIDTH = width >= BREAKPOINTS.md ? 528 : 350;
-  const MARGIN = width >= BREAKPOINTS.md ? 30 : 20;
+  CARD_WIDTH = width >= BREAKPOINTS.lg ? 528 : 350;
+  MARGIN = width >= BREAKPOINTS.md ? 30 : 20;
   const CARD_SIZE = CARD_WIDTH + MARGIN;
 
   const CARD_BUFFER =
@@ -104,7 +107,11 @@ const Testimonial = ({
 }: TestimonialProps) => {
   return (
     <div
-      className={`relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 border border-secondary-blue flex flex-col justify-between rounded-3xl w-full mr-[20px] md:w-[528px] md:mr-[30px]`}
+      className={`relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1 border border-secondary-blue flex flex-col justify-between rounded-3xl`}
+      style={{
+        width: CARD_WIDTH,
+        marginRight: MARGIN,
+      }}
     >
       <p className="text-md lg:text-lg p-[40px] text-center font-medium italic">
         {sentiment}
