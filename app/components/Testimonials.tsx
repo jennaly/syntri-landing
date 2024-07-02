@@ -55,9 +55,9 @@ const Testimonials = () => {
       ref={ref}
     >
       <div
-        className={`relative overflow-hidden 2xl:w-[full] 2xl:${
+        className={`relative overflow-hidden xl:w-[full] 2xl:flex xl:${
           testimonials.length > 3 ? "justify-start" : "justify-center"
-        } 2xl:flex`}
+        }`}
       >
         <div className="max-w-6xl pt-[40px] 2xl:max-w-fit">
           <motion.div
@@ -68,7 +68,7 @@ const Testimonials = () => {
               ease: "easeInOut",
             }}
             className={`flex items-stretch ${
-              testimonials.length > 3 ? `pl-[30px]` : ""
+              testimonials.length > 3 ? `2xl:pl-[30px]` : ""
             }`}
           >
             {testimonials.map((testimonial, index) => {
