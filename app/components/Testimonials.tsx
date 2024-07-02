@@ -21,7 +21,7 @@ const Testimonials = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
-  CARD_WIDTH = width >= BREAKPOINTS.lg ? 528 : 350;
+  CARD_WIDTH = width >= BREAKPOINTS.lg ? 528 : 335;
   MARGIN = width >= BREAKPOINTS.md ? 30 : 20;
   const CARD_SIZE = CARD_WIDTH + MARGIN;
 
