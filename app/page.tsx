@@ -2,6 +2,8 @@ import Image from "next/image";
 import Values from "./components/Values";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
+import Link from "next/link";
+import { CountUpStats } from "./components/Stats";
 
 export default function Home() {
   return (
@@ -121,6 +123,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="stats">
+        <div className="bg-[#C3DCFF]">
+          <div className="max-w-[1440px] mx-auto px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
+            <CountUpStats />
+          </div>
+        </div>
+      </section>
+
       <section
         id="About"
         className="bg-primary-blue w-full lg:scroll-my-10 2xl:scroll-my-20"
@@ -223,6 +233,27 @@ export default function Home() {
           alt="Illustration of stripes"
           className="absolute top-0 md:top-0 lg:top-10 xl:top-20 right-0 w-[150px] xl:w-[200px] object-contain"
         />
+      </section>
+
+      <section
+        id="CTA-Banner"
+        className="max-w-[1440px] mx-auto  px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] py-[48px] xl:py-[100px]"
+      >
+        <div className="bg-[#C3DCFF] rounded-2xl p-10 md:px-20 lg:px-32 lg:py-16 xl:py-20 text-center flex flex-col gap-5">
+          <h2 className="text-3xl xl:text-4xl font-bold tracking-wide max-w-[700px] mx-auto text-primary-blue">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </h2>
+          <p className="mx-auto md:w-[600px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+          <Link href="#">
+            <button className="bg-primary-blue text-white rounded-full px-6 py-2 font-medium tracking-wide">
+              Schedule a free consultation
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );
