@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
 
 export const CountUpStats = () => {
@@ -56,9 +56,10 @@ interface Props {
 const Stat = ({ num, prefix, suffix, decimals = 0, subheading }: Props) => {
   const ref = useRef<HTMLSpanElement | null>(null);
   const isInView = useInView(ref);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated) return;
 
     animate(0, num, {
       duration: 2.5,
@@ -67,8 +68,11 @@ const Stat = ({ num, prefix, suffix, decimals = 0, subheading }: Props) => {
 
         ref.current.textContent = value.toFixed(decimals);
       },
+      onComplete() {
+        setHasAnimated(true);
+      },
     });
-  }, [num, decimals, isInView]);
+  }, [num, decimals, isInView, hasAnimated]);
 
   return (
     <div className="flex w-96 flex-col items-center py-8 sm:py-0 px-3">
