@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 export const futura = localFont({
   src: [
@@ -20,6 +21,11 @@ export const futura = localFont({
       weight: "500",
       style: "italic",
     },
+    {
+      path: "../public/fonts/Futura-Book.otf",
+      weight: "500",
+      style: "regular",
+    },
   ],
   variable: "--font-futura",
 });
@@ -37,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${futura.variable} font-sans`}>
+        <Nav />
         {children}
         <Footer />
       </body>
