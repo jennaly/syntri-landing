@@ -5,7 +5,7 @@ import { animate, useInView } from "framer-motion";
 export const CountUpStats = () => {
   return (
     <div className="md:w-full px-4 py-20 md:py-24">
-      <h2 className="uppercase max-w-[1000px] mx-auto mb-8 text-center text-md sm:text-lg md:mb-16 md:text-3xl xl:text-4xl font-bold tracking-wide">
+      <h2 className="uppercase max-w-[1000px] mx-auto mb-8 text-center text-lg md:mb-16 md:text-3xl xl:text-4xl font-bold tracking-wide">
         Prevent potential losses with{" "}
         <span className="text-secondary-blue block">
           effective IT management
