@@ -248,7 +248,7 @@ export default function Home() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
-          <Link href="#">
+          <Link href="https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink">
             <button className="bg-primary-blue text-white rounded-full px-6 py-2 font-medium tracking-wide">
               Schedule a free consultation
             </button>
