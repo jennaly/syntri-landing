@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="relative overflow-clip">
+      <section id="Services" className="relative overflow-clip">
         <div className="flex absolute top-2 -right-32 md:-right-20 lg:-right-12 xl:-right-44 md:top-4">
           <Image
             src="/assets/Services-Vector-Dots.png"
@@ -121,7 +121,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="our-story" className="bg-primary-blue w-full">
+      <section
+        id="About"
+        className="bg-primary-blue w-full lg:scroll-my-10 2xl:scroll-my-20"
+      >
         <div className="max-w-[1440px] mx-auto flex flex-col py-[48px] xl:pt-[100px] xl:pb-[136px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] text-primary-white">
           <div className="flex flex-col md:flex-row-reverse md:gap-[32px] lg:gap-[44px] xl:justify-between">
             <div className="md:w-[52%] xl:w-[46%] my-auto">
