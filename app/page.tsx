@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <section id="hero" className="bg-primary-blue w-full">
-        <div className="max-w-[1440px] mx-auto flex flex-col py-[80px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] text-primary-white">
+        <div className="max-w-[1440px] mx-auto flex flex-col pt-[20px] py-[40px] md:py-[80px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] text-primary-white">
           <div className="flex flex-col md:flex-row md:gap-[32px] lg:gap-[44px] xl:justify-between">
             <div className="md:hidden mx-auto my-[24px]">
               <div className="relative">
