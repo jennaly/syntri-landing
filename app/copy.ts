@@ -3,6 +3,8 @@ const BOOKING_LINK =
 
 const COMPANY_NAME = "Syntri";
 
+const COPYRIGHT_YEAR = "2024";
+
 const Copy = {
   Hero: {
     titleLine1: "Seamless IT,",
@@ -190,7 +192,7 @@ const Copy = {
     buttonLink: BOOKING_LINK,
   },
   Footer: {
-    copyrightYear: "2024",
+    copyrightYear: COPYRIGHT_YEAR,
   },
 };
 
