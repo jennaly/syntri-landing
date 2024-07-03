@@ -32,7 +32,7 @@ export const futura = localFont({
 
 export const metadata: Metadata = {
   title: "Syntri",
-  description: "Seamless and mordern IT solutions",
+  description: "Seamless and modern IT solutions",
 };
 
 export default function RootLayout({
