@@ -27,7 +27,7 @@ const Value = ({
         height={imageHeight}
         width={imageWidth}
         alt={imageAltText}
-        className="w-[150px] md:w-full"
+        className="xs:w-[100px] sm:w-[130px] md:w-full"
       />
       <span className="text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
         {description}
@@ -38,7 +38,7 @@ const Value = ({
 
 const Values = ({ values }: ValuesType) => {
   return (
-    <div className="grid grid-cols-2 gap-x-10 gap-y-20 md:px-0 px-4 md:grid-cols-4 md:gap-x-28 lg:gap-x-40 xl:gap-x-20 xl:w-[64%] xl:pr-20">
+    <div className="grid grid-cols-2 gap-y-20 md:px-0 px-4 md:grid-cols-4 md:gap-x-28 lg:gap-x-40 xl:gap-x-20 xl:w-[64%] xl:pr-20">
       {values.map((value, index) => (
         <Value {...value} key={index} />
       ))}
