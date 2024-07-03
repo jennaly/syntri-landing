@@ -6,6 +6,7 @@ import { useState } from "react";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 import useMeasure from "react-use-measure";
+import Copy from "../copy";
 
 const BREAKPOINTS = {
   sm: 640,
@@ -17,7 +18,20 @@ const BREAKPOINTS = {
 let CARD_WIDTH: number;
 let MARGIN: number;
 
-const Testimonials = () => {
+type TestimonialProps = {
+  imgUrl: string;
+  imgWidth: number;
+  imgHeight: number;
+  clientName: string;
+  clientJobRole: string;
+  sentiment: string;
+};
+
+type TestimonialsType = {
+  testimonials: TestimonialProps[];
+};
+
+const Testimonials = ({ testimonials }: TestimonialsType) => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
 
@@ -140,42 +154,3 @@ const Testimonial = ({
 };
 
 export default Testimonials;
-
-type TestimonialProps = {
-  imgUrl: string;
-  imgWidth: number;
-  imgHeight: number;
-  clientName: string;
-  clientJobRole: string;
-  sentiment: string;
-};
-
-const testimonials = [
-  {
-    imgUrl: "/assets/SamanthaG.png",
-    imgWidth: 104,
-    imgHeight: 104,
-    clientName: "Samantha G",
-    clientJobRole: "IT Project Manager",
-    sentiment:
-      "Working with Syntri on our MDM migration to Intune was exceptional. Their expertise and meticulous planning ensured a seamless transition, resulting in a resounding success!",
-  },
-  {
-    imgUrl: "/assets/BenS.png",
-    imgWidth: 104,
-    imgHeight: 104,
-    clientName: "Ben S",
-    clientJobRole: "Accountant & Finance Manager",
-    sentiment:
-      "Our partnership with Syntri was a game-changer. Their deep understanding of the needs of our Audit teams’ needs greatly enhanced our efficiency and flexibility.",
-  },
-  {
-    imgUrl: "/assets/Lindsey C.png",
-    imgWidth: 104,
-    imgHeight: 104,
-    clientName: "Lindsey C",
-    clientJobRole: "Human Resources Manager",
-    sentiment:
-      "Syntri transformed our policy enforcement. As an HR manager, I struggled with employee compliance, but their expert solutions streamlined the process effortlessly.",
-  },
-];

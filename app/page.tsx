@@ -4,8 +4,17 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Link from "next/link";
 import { CountUpStats } from "./components/Stats";
+import Copy from "./copy";
 
 export default function Home() {
+  const {
+    Hero,
+    ServicesSection,
+    OurStorySection,
+    TestimonialsSection,
+    CTABanner,
+  } = Copy;
+
   return (
     <main>
       <section id="hero" className="bg-primary-blue w-full">
@@ -40,14 +49,11 @@ export default function Home() {
 
             <div className="flex flex-col gap-[32px] xl:gap-[44px] pt-[44px] pb-[12px] lg:py-[50px] border-b xl:border-0 border-secondary-blue text-center md:w-[48%] md:text-left xl:justify-center xl:py-0 max-h-[550px]">
               <h1 className="uppercase font-bold text-3xl xl:text-[64px] xl:leading-[82px]">
-                <span className="block">Seamless IT,</span>{" "}
-                <span className="block"> Modern Solutions</span>
+                <span className="block">{Hero.titleLine1}</span>{" "}
+                <span className="block">{Hero.titleLine2}</span>
               </h1>
               <p className="text-md lg:text-lg xl:leading-[40px] tracking-wide text-primary-grey">
-                We unlock your business potential by streamlining IT, letting
-                you focus on what you do best. Our expert services amplify
-                productivity and drive growth with innovative, reliable
-                solutions.
+                {Hero.description}
               </p>
               <div className="xl:block xl:w-[70%] xl:bg-secondary-blue h-[1px]"></div>
             </div>
@@ -83,9 +89,9 @@ export default function Home() {
 
           <div className="xl:flex xl:mt-[80px] xl:justify-between xl:items-center">
             <h2 className="text-3xl xl:text-4xl font-bold tracking-wide text-center md:text-left py-[44px]">
-              Our Values
+              {Hero.OurValuesSection.heading}
             </h2>
-            <Values />
+            <Values values={Hero.OurValuesSection.values} />
           </div>
         </div>
       </section>
@@ -111,15 +117,13 @@ export default function Home() {
         <div className="flex flex-col gap-[32px] lg:gap-[44px] max-w-[1440px] mx-auto text-center text-primary-black py-[48px] xl:py-[120px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="flex flex-col gap-[24px]">
             <h2 className="text-3xl xl:text-4xl font-bold tracking-wide">
-              What We Deliver
+              {ServicesSection.heading}
             </h2>
             <p className="md:w-[550px] lg:w-[700px] md:mx-auto text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
-              Enhance your business efficiency with our comprehensive suite of
-              solutions, designed to streamline processes and drive
-              productivity.
+              {ServicesSection.description}
             </p>
           </div>
-          <Services />
+          <Services services={ServicesSection.services} />
         </div>
       </section>
 
@@ -182,23 +186,13 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-[32px] pb-[12px] mt-[10px] py-[50px] md:mt-[0] md:py-[0] text-center md:w-[48%] md:text-left xl:justify-end max-h-[550px]">
               <h2 className="mx-auto md:mx-0 text-3xl xl:text-4xl font-bold tracking-wide max-w-[500px]">
-                Know Our Story
+                {OurStorySection.heading}
               </h2>
               <p className="text-md lg:text-lg tracking-wide text-primary-grey">
-                At Syntri, we pride ourselves on over a decade of extensive
-                experience in the IT industry, serving businesses across the
-                spectrum from small startups to large enterprises. With a deep
-                understanding of the evolving technological landscape, we
-                deliver tailored solutions that meet the unique needs of each
-                client.
+                {OurStorySection.description.paragraph1}
               </p>
               <p className="text-md lg:text-lg tracking-wide text-primary-grey">
-                Our journey through diverse sectors has equipped us with
-                invaluable insights and expertise, enabling us to navigate
-                challenges and maximize opportunities for our clients. As
-                trusted advisors, we are committed to leveraging our wealth of
-                experience to drive innovation, efficiency, and growth for
-                businesses in today's dynamic digital era.
+                {OurStorySection.description.paragraph2}
               </p>
             </div>
           </div>
@@ -209,15 +203,14 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] pt-[48px] xl:pt-[100px]">
           <div className="max-w-[570px]  text-center md:text-left flex flex-col gap-[24px]">
             <h2 className="text-3xl xl:text-4xl font-bold tracking-wide">
-              See What Clients Are Saying
+              {TestimonialsSection.heading}
             </h2>
             <p className="text-md lg:text-lg tracking-wide">
-              Explore the sentiments and experiences of our clients as they
-              share their thoughts and satisfaction.
+              {TestimonialsSection.description}
             </p>
           </div>
         </div>
-        <Testimonials />
+        <Testimonials testimonials={TestimonialsSection.testimonials} />
         <Image
           src="/assets/Services-Vector-Dots.png"
           width={722}
@@ -241,16 +234,12 @@ export default function Home() {
       >
         <div className="bg-[#C3DCFF] rounded-2xl p-10 md:px-20 lg:px-32 lg:py-16 xl:py-20 text-center flex flex-col gap-5">
           <h2 className="text-3xl xl:text-4xl font-bold tracking-wide max-w-[700px] mx-auto text-primary-blue">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            {CTABanner.heading}
           </h2>
-          <p className="mx-auto md:w-[600px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </p>
-          <Link href="https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink">
+          <p className="mx-auto md:w-[600px]">{CTABanner.description}</p>
+          <Link href={CTABanner.buttonLink}>
             <button className="bg-primary-blue text-white rounded-full px-6 py-2 font-medium tracking-wide">
-              Schedule a free consultation
+              {CTABanner.buttonLabel}
             </button>
           </Link>
         </div>

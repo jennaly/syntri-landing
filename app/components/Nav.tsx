@@ -3,9 +3,12 @@ import { futura } from "../layout";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
-import Footer from "./Footer";
+import Copy from "../copy";
 
 const Nav = () => {
+  const {
+    Nav: { CompanyName, buttonLabel, buttonLink },
+  } = Copy;
   return (
     <div
       className={`bg-primary-blue ${futura.variable} font-sans text-primary-white`}
@@ -20,7 +23,7 @@ const Nav = () => {
             className="w-[41px] md:w-[55px]"
           />
           <span className="uppercase font-bold text-2xl xl:text-[37px]">
-            SYNTRI
+            {CompanyName}
           </span>
         </div>
 
@@ -33,9 +36,9 @@ const Nav = () => {
               <Link href="#Services">Services</Link>
             </li>
             <li>
-              <Link href="https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink">
+              <Link href={buttonLink}>
                 <button className="rounded-md bg-secondary-blue py-[16px] px-[20px] font-bold">
-                  Contact Us
+                  {buttonLabel}
                 </button>
               </Link>
             </li>
@@ -43,7 +46,7 @@ const Nav = () => {
         </nav>
 
         <nav className="md:hidden">
-          <MobileNav />
+          <MobileNav data={{ CompanyName, buttonLabel, buttonLink }} />
         </nav>
       </div>
     </div>

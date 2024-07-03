@@ -8,7 +8,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const MobileNav = () => {
+type NavProps = {
+  data: {
+    CompanyName: string;
+    buttonLabel: string;
+    buttonLink: string;
+  };
+};
+
+const MobileNav = ({
+  data: { CompanyName, buttonLabel, buttonLink },
+}: NavProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -53,7 +63,7 @@ const MobileNav = () => {
                     className="w-[41px] md:w-[55px]"
                   />
                   <span className="uppercase font-bold text-2xl xl:text-[37px]">
-                    SYNTRI
+                    {CompanyName}
                   </span>
                 </div>
                 <IoClose
@@ -76,9 +86,9 @@ const MobileNav = () => {
                     </Link>
                   </li>
                   <li className="mt-4">
-                    <Link href="https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink">
+                    <Link href={buttonLink}>
                       <button className="rounded-md bg-secondary-blue text-primary-white py-[16px] px-[20px] font-bold w-full">
-                        Contact Us
+                        {buttonLabel}
                       </button>
                     </Link>
                   </li>

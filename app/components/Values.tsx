@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
+type ValuesType = {
+  values: ValueType[];
+};
+
 type ValueType = {
   imageUrl: string;
   imageWidth: number;
@@ -32,7 +36,7 @@ const Value = ({
   );
 };
 
-const Values = () => {
+const Values = ({ values }: ValuesType) => {
   return (
     <div className="grid grid-cols-2 gap-x-10 gap-y-20 md:px-0 px-4 md:grid-cols-4 md:gap-x-28 lg:gap-x-40 xl:gap-x-20 xl:w-[64%] xl:pr-20">
       {values.map((value, index) => (
@@ -41,36 +45,5 @@ const Values = () => {
     </div>
   );
 };
-
-const values = [
-  {
-    imageUrl: "/assets/Value-Trust.png",
-    imageWidth: 106,
-    imageHeight: 100,
-    imageAltText: "Illustration of a handshake",
-    description: "Trust",
-  },
-  {
-    imageUrl: "/assets/Value-Expertise.png",
-    imageWidth: 103,
-    imageHeight: 100,
-    imageAltText: "Illustration of an employee and three stars above him",
-    description: "Expertise",
-  },
-  {
-    imageUrl: "/assets/Value-Innovation.png",
-    imageWidth: 100,
-    imageHeight: 100,
-    imageAltText: "Illustration of a lightbulb",
-    description: "Innovation",
-  },
-  {
-    imageUrl: "/assets/Value-Collaboration.png",
-    imageWidth: 100,
-    imageHeight: 100,
-    imageAltText: "Illustration of stacked hands in huddle",
-    description: "Collaboration",
-  },
-];
 
 export default Values;
