@@ -189,6 +189,9 @@ const Copy = {
     buttonLabel: "Contact Us",
     buttonLink: BOOKING_LINK,
   },
+  Footer: {
+    copyrightYear: "2024",
+  },
 };
 
 export default Copy;
