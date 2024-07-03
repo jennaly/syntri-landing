@@ -47,15 +47,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-[32px] xl:gap-[44px] pt-[44px] pb-[12px] lg:py-[50px] border-b xl:border-0 border-secondary-blue text-center md:w-[48%] md:text-left xl:justify-center xl:py-0 max-h-[550px]">
-              <h1 className="uppercase font-bold text-3xl xl:text-[64px] xl:leading-[82px]">
+            <div className="flex flex-col justify-center gap-[32px] xl:gap-[44px] pt-[44px] pb-[12px] lg:py-[50px] border-b md:border-0 border-secondary-blue text-center md:w-[48%] md:text-left xl:justify-center xl:py-0 max-h-[550px]">
+              <h1 className="uppercase font-bold text-3xl md:text-4xl lg:text-5xl xl:text-[64px] xl:leading-[82px]">
                 <span className="block">{Hero.titleLine1}</span>{" "}
                 <span className="block">{Hero.titleLine2}</span>
               </h1>
-              <p className="text-md lg:text-lg xl:leading-[40px] tracking-wide text-primary-grey">
+              <p className="text-md md:text-lg lg:text-xl xl:leading-[40px] tracking-wide text-primary-grey">
                 {Hero.description}
               </p>
-              <div className="xl:block xl:w-[70%] xl:bg-secondary-blue h-[1px]"></div>
+              <div className="md:block md:w-full xl:w-[70%] md:bg-secondary-blue h-[1px]"></div>
             </div>
 
             <div className="hidden md:inline md:w-[52%] xl:w-[48%]">
