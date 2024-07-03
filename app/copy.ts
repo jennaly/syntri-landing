@@ -169,7 +169,7 @@ const Copy = {
           "Our partnership with Syntri was a game-changer. Their deep understanding of the needs of our Audit teams’ needs greatly enhanced our efficiency and flexibility.",
       },
       {
-        imgUrl: "/assets/Lindsey C.png",
+        imgUrl: "/assets/LindseyC.png",
         imgWidth: 104,
         imgHeight: 104,
         clientName: "Lindsey C",
