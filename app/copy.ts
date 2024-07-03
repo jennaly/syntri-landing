@@ -180,9 +180,10 @@ const Copy = {
     ],
   },
   CTABanner: {
-    heading: " Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    heading:
+      " Is your organization ready to elevate its business productivity with cutting-edge IT solutions and expert consulting services?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Take the next step towards transforming your business productivity! Schedule a free consultation today to learn more.",
     buttonLabel: "Schedule a free consultation",
     buttonLink: BOOKING_LINK,
   },
