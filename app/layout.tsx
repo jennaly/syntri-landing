@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import Head from "next/head";
 
 export const futura = localFont({
   src: [
@@ -42,6 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
       <body className={`${futura.variable} font-sans`}>
         <Nav />
         {children}
