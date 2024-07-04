@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <body className={`${futura.variable} font-sans`}>
+      <body className={`${futura.variable} font-sans overflow-x-hidden`}>
         <Nav />
         {children}
         <Footer />
