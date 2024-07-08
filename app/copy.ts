@@ -122,7 +122,8 @@ const Copy = {
       {
         num: 60,
         suffix: "%",
-        subheading: "small businesses go out of business after a cyber attack.",
+        subheading:
+          "of small businesses go out of business after a cyber attack.",
       },
       {
         num: 93,
