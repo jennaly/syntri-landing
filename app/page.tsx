@@ -5,6 +5,7 @@ import Testimonials from "./components/Testimonials";
 import Link from "next/link";
 import { CountUpStats } from "./components/Stats";
 import Copy from "./copy";
+import WaysToContact from "./components/WaysToContact";
 
 export default function Home() {
   const {
@@ -12,6 +13,7 @@ export default function Home() {
     ServicesSection,
     OurStorySection,
     TestimonialsSection,
+    ContactUsSection,
     CTABanner,
   } = Copy;
 
@@ -226,6 +228,68 @@ export default function Home() {
           alt="Illustration of stripes"
           className="absolute top-0 md:top-0 lg:top-10 xl:top-20 right-0 w-[150px] xl:w-[200px] object-contain"
         />
+      </section>
+
+      <section
+        id="Contact-Us"
+        className="max-w-[1440px] mx-auto  px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] py-[48px] xl:py-[100px]"
+      >
+        <div className="flex flex-col gap-[32px] lg:gap-[44px] max-w-[1440px] mx-auto text-center text-primary-black pt-[48px] xl:pt-[120px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
+          <div className="flex flex-col gap-[24px]">
+            <h2 className="text-3xl xl:text-4xl font-bold tracking-wide">
+              {ContactUsSection.heading}
+            </h2>
+            <p className="md:w-[550px] lg:w-[700px] md:mx-auto text-lg lg:text-[22px] leading-[26px] lg:leading-[30px] xl:leading-[40px] tracking-wide">
+              {ContactUsSection.description}
+            </p>
+          </div>
+        </div>
+
+        <WaysToContact methods={ContactUsSection.waysToContact} />
+        <div className="mx-auto">
+          <form action="https://formsubmit.co/vinny@syntri.us" method="POST">
+            <div className="flex gap-4">
+              <div className="w-1/2 flex flex-col gap-2">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Smith"
+                  className="w-full p-2 border border-secondary-grey rounded-xl"
+                />
+              </div>
+              <div className="w-1/2 flex flex-col gap-2">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@gmail.com"
+                  className="w-full p-2 border border-secondary-grey rounded-xl"
+                />
+              </div>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-2">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                cols={50}
+                rows={4}
+                className="w-full p-2 border border-secondary-grey rounded-xl"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full p-3 rounded-full bg-primary-blue text-white mt-6"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
       </section>
 
       <section

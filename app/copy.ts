@@ -1,3 +1,5 @@
+import { MdOutlineMail } from "react-icons/md";
+
 const BOOKING_LINK =
   "https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink";
 
@@ -177,6 +179,34 @@ const Copy = {
         clientJobRole: "Human Resources Manager",
         sentiment:
           "Syntri transformed our policy enforcement. As an HR manager, I struggled with employee compliance, but their expert solutions streamlined the process effortlessly.",
+      },
+    ],
+  },
+  ContactUsSection: {
+    heading: "Contact Us",
+    description:
+      "Whether you have questions about our services, want to discuss your project in detail, or simply want to say hello, we're here to help.",
+    waysToContact: [
+      {
+        method: "email",
+        imgUrl: "/assets/Mail-Icon.png",
+        imgWidth: 360,
+        imgHeight: 360,
+        text: "vinny@syntri.us",
+      },
+      {
+        method: "mobile",
+        imgUrl: "/assets/Phone-Icon.png",
+        imgWidth: 104,
+        imgHeight: 104,
+        text: "(123) 456 7890",
+      },
+      {
+        method: "address",
+        imgUrl: "/assets/Address-Icon.png",
+        imgWidth: 104,
+        imgHeight: 104,
+        text: "123 main street",
       },
     ],
   },
