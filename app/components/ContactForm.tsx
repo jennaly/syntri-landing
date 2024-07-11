@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 const ContactForm = () => {
-  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(true);
   const [showErrorMsg, setShowErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -140,7 +140,7 @@ const ContactForm = () => {
             />
           </svg>
           <h4 className="mt-2 mb-4 text-center w-full">Success</h4>
-          <p className="text-center w-1/2 mx-auto">
+          <p className="text-center mx-auto px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
             Thank you for reaching out! <br></br>Your message has been received,
             and our team will be in touch with you shortly.
           </p>
