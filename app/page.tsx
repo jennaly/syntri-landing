@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CountUpStats } from "./components/Stats";
 import Copy from "./copy";
 import WaysToContact from "./components/WaysToContact";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   const {
@@ -246,50 +247,7 @@ export default function Home() {
         </div>
 
         <WaysToContact methods={ContactUsSection.waysToContact} />
-        <div className="mx-auto">
-          <form action="https://formsubmit.co/vinny@syntri.us" method="POST">
-            <div className="flex gap-4">
-              <div className="w-1/2 flex flex-col gap-2">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Jane Smith"
-                  className="w-full p-2 border border-secondary-grey rounded-xl"
-                />
-              </div>
-              <div className="w-1/2 flex flex-col gap-2">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="email@gmail.com"
-                  className="w-full p-2 border border-secondary-grey rounded-xl"
-                />
-              </div>
-            </div>
-
-            <div className="mt-4 flex flex-col gap-2">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                cols={50}
-                rows={4}
-                className="w-full p-2 border border-secondary-grey rounded-xl"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full p-3 rounded-full bg-primary-blue text-white mt-6"
-            >
-              Send message
-            </button>
-          </form>
-        </div>
+        <ContactForm />
       </section>
 
       <section
