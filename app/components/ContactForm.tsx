@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 const ContactForm = () => {
-  const [showSuccessMsg, setShowSuccessMsg] = useState(true);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
   const [showErrorMsg, setShowErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
 
