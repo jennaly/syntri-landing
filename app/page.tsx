@@ -232,9 +232,9 @@ export default function Home() {
 
       <section
         id="Contact-Us"
-        className="max-w-[1440px] mx-auto  px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] py-[48px] xl:py-[100px]"
+        className="max-w-[1440px] mx-auto  px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px] py-[48px] "
       >
-        <div className="flex flex-col gap-[32px] lg:gap-[44px] max-w-[1440px] mx-auto text-center text-primary-black pt-[48px] xl:pt-[120px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
+        <div className="flex flex-col gap-[32px] lg:gap-[44px] max-w-[1440px] mx-auto text-center text-primary-black pt-[48px] px-[24px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="flex flex-col gap-[24px]">
             <h2 className="text-3xl xl:text-4xl font-bold tracking-wide">
               {ContactUsSection.heading}
