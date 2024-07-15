@@ -15,7 +15,9 @@ type WaysToContactType = {
 
 const Method = ({ imgUrl, imgWidth, imgHeight, method, text }: MethodType) => {
   return (
-    <div className="flex flex-col items-center gap-[16px] w-full md:w-1/3 text-center">
+    <div
+      className={`flex flex-col items-center gap-[16px] w-full md:w-auto flex-wrap text-center`}
+    >
       <div className="bg-primary-blue p-4 rounded-full">
         <Image
           src={imgUrl}
@@ -32,7 +34,7 @@ const Method = ({ imgUrl, imgWidth, imgHeight, method, text }: MethodType) => {
 
 const WaysToContact = ({ methods }: WaysToContactType) => {
   return (
-    <div className="my-[48px] flex flex-col md:flex-row gap-6 max-w-[500px] mx-auto">
+    <div className="my-[48px] flex flex-col md:flex-row gap-10 max-w-[500px] mx-auto justify-center">
       {methods.map((method, index) => (
         <Method {...method} key={index} />
       ))}
