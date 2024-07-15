@@ -215,7 +215,7 @@ const Copy = {
   Nav: {
     CompanyName: COMPANY_NAME,
     buttonLabel: "Contact Us",
-    buttonLink: BOOKING_LINK,
+    buttonLink: "#Contact-Us",
   },
   Footer: {
     copyrightYear: COPYRIGHT_YEAR,

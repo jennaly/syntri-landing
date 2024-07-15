@@ -86,7 +86,7 @@ const MobileNav = ({
                     </Link>
                   </li>
                   <li className="mt-4">
-                    <Link href={buttonLink}>
+                    <Link href={buttonLink} onClick={toggleMenu}>
                       <button className="rounded-md bg-secondary-blue text-primary-white py-[16px] px-[20px] font-bold w-full">
                         {buttonLabel}
                       </button>
