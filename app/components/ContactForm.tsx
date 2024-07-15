@@ -12,7 +12,7 @@ const ContactForm = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    formData.append("access_key", "380a7be3-513f-4536-93f8-ff97f366cad3");
+    formData.append("access_key", "2cb7edd3-6df5-494f-9e13-0acefa959443");
 
     const object = Object.fromEntries(formData);
     const formDataJSON = JSON.stringify(object);
@@ -63,6 +63,7 @@ const ContactForm = () => {
                   name="name"
                   placeholder="Jane Smith"
                   className="w-full p-2 border border-secondary-grey rounded-xl"
+                  required
                 />
               </div>
               <div className="w-1/2 flex flex-col gap-2">
@@ -73,6 +74,7 @@ const ContactForm = () => {
                   name="email"
                   placeholder="email@gmail.com"
                   className="w-full p-2 border border-secondary-grey rounded-xl"
+                  required
                 />
               </div>
             </div>
@@ -85,6 +87,7 @@ const ContactForm = () => {
                 cols={50}
                 rows={4}
                 className="w-full p-2 border border-secondary-grey rounded-xl"
+                required
               ></textarea>
             </div>
 
