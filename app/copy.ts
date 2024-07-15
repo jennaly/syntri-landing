@@ -4,7 +4,8 @@ const BOOKING_LINK =
   "https://outlook.office.com/bookwithme/user/5f656b29b8954073994cc287e5d243df@syntri.us/meetingtype/TEeP5intjUqtiAVP05XOBg2?anonymous&ep=mlink";
 
 const COMPANY_NAME = "Syntri";
-
+const COMPANY_EMAIL = "info@syntri.us";
+const COMPANY_PHONE_NUMBER = "(516) 329 9041";
 const COPYRIGHT_YEAR = "2024";
 
 const Copy = {
@@ -192,21 +193,14 @@ const Copy = {
         imgUrl: "/assets/Mail-Icon.png",
         imgWidth: 360,
         imgHeight: 360,
-        text: "vinny@syntri.us",
+        text: COMPANY_EMAIL,
       },
       {
         method: "mobile",
         imgUrl: "/assets/Phone-Icon.png",
         imgWidth: 104,
         imgHeight: 104,
-        text: "(123) 456 7890",
-      },
-      {
-        method: "address",
-        imgUrl: "/assets/Address-Icon.png",
-        imgWidth: 104,
-        imgHeight: 104,
-        text: "123 main street",
+        text: COMPANY_PHONE_NUMBER,
       },
     ],
   },
