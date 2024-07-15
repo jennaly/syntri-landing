@@ -10,18 +10,20 @@ const ContactForm = () => {
   async function handleSubmit(e) {
     setLoading(true);
     e.preventDefault();
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "380a7be3-513f-4536-93f8-ff97f366cad3");
+
+    const object = Object.fromEntries(formData);
+    const formDataJSON = JSON.stringify(object);
+
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        access_key: "380a7be3-513f-4536-93f8-ff97f366cad3",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
-      }),
+      body: formDataJSON,
     });
     const result = await response.json();
 
@@ -41,11 +43,6 @@ const ContactForm = () => {
       {!showSuccessMsg && (
         <div className="mx-auto">
           <form onSubmit={handleSubmit}>
-            <input
-              type="hidden"
-              name="access_key"
-              value="380a7be3-513f-4536-93f8-ff97f366cad3"
-            />
             <input
               type="hidden"
               name="subject"
