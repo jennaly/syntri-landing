@@ -7,10 +7,10 @@ const ContactForm = () => {
   const [showErrorMsg, setShowErrorMsg] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     setLoading(true);
     e.preventDefault();
-    const formData = new FormData(e.target);
+    const formData = new FormData(e.target as HTMLFormElement);
 
     formData.append("access_key", "2cb7edd3-6df5-494f-9e13-0acefa959443");
 
